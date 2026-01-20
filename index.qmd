@@ -19,9 +19,18 @@ A non-exaustive list of topics included in the workshop is:
 
 There will be up to 20 talks.
 
-## Registration
+### Registration
 
 There are no registration fee, but registration is mandatory to participate. Please, use this [link](https://forms.gle/VdptPHU3YYgUwzoXA) to register or propose a talk.
 
 Deadline for registration and talk proposals: 15 March 2026.
 
+### Funding
+
+This workshop is funded by:
+
+- Dipartimento di Matematica e Informatica - Università degli studi di Catania 
+- Progetto PRIN 2022 DD n. 104/2022 e DD n. 1401/2024 del MUR <br>
+  Titolo progetto: Unirationality, Hilbert schemes, and singularities. <br>
+  Codice progetto: 2022K48YYP
+- Progetto UNICT - PIACERI 2024 "ACIVA" 
