@@ -1,1 +1,1 @@
-Sitemap: https://pedritomelenas.github.io/vsgs-2026/sitemap.xml
+Sitemap: https://numerical-semigroups.github.io/vsgs-2026/sitemap.xml
