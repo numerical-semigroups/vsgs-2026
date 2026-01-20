@@ -1,0 +1,27 @@
+---
+title: Value semigroups and good semigroups 
+subtitle: and applications to curve singularities and one-dimensional rings
+toc: false
+---
+
+
+### Catania 17-19 June, 2026
+
+A non-exaustive list of topics included in the workshop is:
+
+- numerical semigroups;
+- monomial curves;
+- value semigroups and good subsemigroups of $\mathbb N^d$;
+- algebroid branches;
+- algebroid curves;
+- one-dimensional analytically unramified local rings;
+- semigroup of curves with one place at infinity.
+
+There will be up to 20 talks.
+
+## Registration
+
+There are no registration fee, but registration is mandatory to participate. Please, use this [link](https://forms.gle/VdptPHU3YYgUwzoXA) to register or propose a talk.
+
+Deadline for registration and talk proposals: 15 March 2026.
+
