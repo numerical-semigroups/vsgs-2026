@@ -8,8 +8,7 @@ subtitle: "Catania, 17-19 June 2026"
 
 - Marco D’Anna, Università degli Studi di Catania
 - Felix Delgado de la Mata, Universidad de Valladolid
-- Pedro A. Garcia Sanchez, Universidad de Valladolid
-
+- Pedro A. Garcia Sanchez, Universidad de Granada
 ## Organizers
 
 - Marco D’Anna, Università degli Studi di Catania
