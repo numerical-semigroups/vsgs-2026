@@ -2,6 +2,7 @@
 title: "List of participants"
 ---
 
+- Maria Alberich-Carramiñana, Universitat Politècnica de Catalunya
 - Patricio Almirón, Universidad de Valladolid
 - Marco D'Anna, Università degli Studi di Catania
 - Félix Delgado, Universidad de Valladolid
