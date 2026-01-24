@@ -10,5 +10,6 @@ title: "List of participants"
 - Pedro A. García Sánchez, Universidad de Granada
 - Julio Moyano, Universitat Jaume I
 - Vincenzo Micale, Università degli Studi di Catania
+- Francesco Russo, Università degli Studi di Catania
 - Vincenzo Scarvaglieri, Università degli Studi di Catania
 - Indranath Sengupta, IIT Gandhinagar
