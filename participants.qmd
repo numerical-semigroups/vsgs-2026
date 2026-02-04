@@ -12,5 +12,6 @@ title: "List of participants"
 - Julio Moyano, Universitat Jaume I
 - Vincenzo Micale, Università degli Studi di Catania
 - Francesco Russo, Università degli Studi di Catania
+- Alessio Sammartano, Politecnico di Milano
 - Vincenzo Scarvaglieri, Università degli Studi di Catania
 - Indranath Sengupta, IIT Gandhinagar
