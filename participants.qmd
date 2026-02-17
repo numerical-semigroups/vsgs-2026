@@ -4,6 +4,7 @@ title: "List of participants"
 
 - Maria Alberich-Carramiñana, Universitat Politècnica de Catalunya
 - Patricio Almirón, Universidad de Valladolid
+- Abdallah Assi, LAREMA, Universitè d'Angers
 - Alberto Calabri, Università degli Studi di Ferrara
 - Marco D'Anna, Università degli Studi di Catania
 - Félix Delgado, Universidad de Valladolid
@@ -16,3 +17,5 @@ title: "List of participants"
 - Alessio Sammartano, Politecnico di Milano
 - Vincenzo Scarvaglieri, Università degli Studi di Catania
 - Indranath Sengupta, IIT Gandhinagar
+- Dumitru Stamate, University of Bucharest
+
