@@ -10,6 +10,7 @@ title: "List of participants"
 - Félix Delgado, Universidad de Valladolid
 - Carmelo Antonio Finocchiaro, Università degli Studi di Catania
 - Pedro A. García Sánchez, Universidad de Granada
+- Lorenzo Guerrieri, Jagiellonian University in Krakow
 - Rajesh Kumar Sau, University of Messina
 - Julio Moyano, Universitat Jaume I
 - Vincenzo Micale, Università degli Studi di Catania
