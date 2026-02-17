@@ -3,6 +3,7 @@ project:
 
 website:
   title: "VSGS-2026"
+  back-to-top-navigation: true
   navbar:
     left:
       - text: "Home"
