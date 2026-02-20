@@ -12,6 +12,7 @@ title: "List of participants"
 - Pedro A. García Sánchez, Universidad de Granada
 - Lorenzo Guerrieri, Jagiellonian University in Krakow
 - Rajesh Kumar Sau, University of Messina
+- Nicola Maugeri, Università degli Studi di Catania
 - Julio Moyano, Universitat Jaume I
 - Vincenzo Micale, Università degli Studi di Catania
 - Francesco Russo, Università degli Studi di Catania
