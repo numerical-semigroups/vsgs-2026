@@ -20,4 +20,5 @@ title: "List of participants"
 - Vincenzo Scarvaglieri, Università degli Studi di Catania
 - Indranath Sengupta, IIT Gandhinagar
 - Dumitru Stamate, University of Bucharest
+- Yotam Svoray, University of Utah
 

@@ -34,3 +34,4 @@ This workshop is funded by:
   Titolo progetto: Unirationality, Hilbert schemes, and singularities. <br>
   Codice progetto: 2022K48YYP
 - Progetto UNICT - PIACERI 2024 "ACIVA" 
+- Grant PID2022-138906NB-C21, "Singularidades. Métodos valorativos y combinatorios. Códigos algebraicos y de red", funded by MCIN/AEI/ 10.13039/501100011033 and by ERDF "A way of making Europe".
