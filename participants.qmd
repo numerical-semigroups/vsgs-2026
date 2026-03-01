@@ -13,8 +13,9 @@ title: "List of participants"
 - Lorenzo Guerrieri, Jagiellonian University in Krakow
 - Rajesh Kumar Sau, University of Messina
 - Nicola Maugeri, Università degli Studi di Catania
-- Julio Moyano, Universitat Jaume I
 - Vincenzo Micale, Università degli Studi di Catania
+- Alessio Moscariello, University of Graz
+- Julio Moyano, Universitat Jaume I
 - Francesco Russo, Università degli Studi di Catania
 - Alessio Sammartano, Politecnico di Milano
 - Vincenzo Scarvaglieri, Università degli Studi di Catania
