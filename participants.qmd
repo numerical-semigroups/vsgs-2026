@@ -6,7 +6,9 @@ title: "List of participants"
 - Patricio Almirón, Universidad de Valladolid
 - Abdallah Assi, LAREMA, Universitè d'Angers
 - Alberto Calabri, Università degli Studi di Ferrara
+- Pietro Campochiaro, Jagiellonian University
 - Marco D'Anna, Università degli Studi di Catania
+- Hailong Dao, University of Kansas
 - Félix Delgado, Universidad de Valladolid
 - Carmelo Antonio Finocchiaro, Università degli Studi di Catania
 - Pedro A. García Sánchez, Universidad de Granada
@@ -21,5 +23,6 @@ title: "List of participants"
 - Vincenzo Scarvaglieri, Università degli Studi di Catania
 - Indranath Sengupta, IIT Gandhinagar
 - Dumitru Stamate, University of Bucharest
+- Francesco Strazzanti, University of Messina
 - Yotam Svoray, University of Utah
 
