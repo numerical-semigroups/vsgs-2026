@@ -1,17 +1,31 @@
 [
   {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Talks will be 30 minutes long with a break of 10 minutes for discussion."
+  },
+  {
+    "objectID": "schedule.html#june",
+    "href": "schedule.html#june",
+    "title": "Schedule",
+    "section": "17 June",
+    "text": "17 June\n9:30 Opening\n9:40\n10:20\n11:00 Coffee Break\n11:30\n12:10\n12:50 Lunch break\n15:00\n15:40\n16:20"
+  },
+  {
     "objectID": "schedule.html#june-1",
     "href": "schedule.html#june-1",
     "title": "Schedule",
     "section": "18 June",
-    "text": "18 June\n\nMorning\n\n\nAfternoon"
+    "text": "18 June\n9:00\n9:40\n10:20\n11:00 Coffee Break\n11:30\n12:10\n12:50 Lunch break\n15:00\n15:40\n16:20"
   },
   {
     "objectID": "schedule.html#june-2",
     "href": "schedule.html#june-2",
     "title": "Schedule",
     "section": "19 June",
-    "text": "19 June\n\nMorning"
+    "text": "19 June\n9:00\n9:40\n10:20\n11:00 Coffee Break\n11:30\n12:10\n12:50 Lunch break"
   },
   {
     "objectID": "how-to-arrive.html",
