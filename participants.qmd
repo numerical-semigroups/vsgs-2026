@@ -13,6 +13,7 @@ title: "List of participants"
 - Félix Delgado, Universidad de Valladolid
 - Carmelo Antonio Finocchiaro, Università degli Studi di Catania
 - Pedro A. García Sánchez, Universidad de Granada
+- William Giovanni Hernández Yanes, Universidad de La Laguna
 - Lorenzo Guerrieri, Jagiellonian University in Krakow
 - Ahmed Hamed, University of Monastir
 - Rajesh Kumar Sau, University of Messina
