@@ -1,10 +1,15 @@
 ---
 title: Schedule
+format:
+  html:
+    code-fold: true
+    echo: false
+    execute: true
 ---
 
 Talks will be 30 minutes long with a break of 10 minutes for discussion.
 
-
+<!-- 
 ## 17 June
 
 9:30 Opening
@@ -62,5 +67,92 @@ Talks will be 30 minutes long with a break of 10 minutes for discussion.
 
 11:30 
 
-12:10
+12:10 -->
 
+
+:::{#talks-list}
+
+
+```{ojs}
+MathJax = {
+  const MathJax = await require('https://cdn.jsdelivr.net/npm/mathjax@4/tex-svg.js')
+    .catch(() => window.MathJax)
+  return MathJax
+}
+
+
+wm= window['MathJax'] = {
+  tex: {
+    inlineMath: {'[+]': [['$', '$'], ['\\(', '\\)']]}
+  },
+  output: {
+        font: 'mathjax-fira',
+        displayOverflow: 'scroll'
+  }
+};
+
+
+
+//file = FileAttachment("talks.xlsx").xlsx() 
+//data = file.sheet("talks", {range:"A1:G21",headers: true})
+
+// data = [
+//   {Name: "Alice", Affiliation: "University A", Title: "Talk on $x^2$"},
+//   {Name: "Bob", Affiliation: "University B", Title: "Talk on $y^2$"}
+// ]
+
+
+dataf = FileAttachment("talks.tsv").tsv()
+
+data=dataf.sort((a, b) => a.Day.localeCompare(b.Day) || a.Hour.localeCompare(b.Hour))
+
+
+muestra = function(){
+var code = "<div id='talks'>"
+var day=""
+data.forEach(d => {
+if (d.Day !== day) {
+  day = d.Day;
+  code = code + "<h3>" + day.toLocaleString("en-UK", {
+  day: "numeric",
+  month: "long",
+  year: "numeric"
+}) + "</h3>"
+}
+code = code +"<p> "+ d.Hour+ " <strong>"+ d.Name + "</strong>, " + d.Affiliation + ", <em>" + d.Title + " </em></p>"
+code = code + "<details><summary>Abstract</summary><p>" + d.Abstract + "</p></details>"
+code = code + "</div>"
+});
+
+return code
+}
+
+//html`${data.map(d => html`<p>${d.Name} ${d.Affiliation} ${d.Title}</p>`)}`
+
+//html`<p>${data[0].Title.val}</p>`
+
+// blah ="$x^2$"
+
+// ble = data[0].Title
+
+// blu = ble + " $x^2$"
+
+// example = html`${blah}`
+
+// ex = html`${blu}`
+
+html`${muestra()}`
+
+```
+
+:::
+
+<!-- 
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: {'[+]': [['$', '$'], ['\\(', '\\)']]}
+  }
+};
+MathJax.typesetPromise(["talks-list"])
+</script> -->
