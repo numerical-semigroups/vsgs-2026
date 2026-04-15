@@ -5,6 +5,7 @@ title: "List of participants"
 - Maria Alberich-Carramiñana, Universitat Politècnica de Catalunya
 - Patricio Almirón, Universidad de Valladolid
 - Abdallah Assi, LAREMA, Universitè d'Angers
+- Vittoria Bonanzinga, University of Reggio Calabria
 - Alberto Calabri, Università degli Studi di Ferrara
 - Pietro Campochiaro, Jagiellonian University
 - Veronica Crispin Quinonez, Uppsala University
@@ -30,4 +31,5 @@ title: "List of participants"
 - Dumitru Stamate, University of Bucharest
 - Francesco Strazzanti, University of Messina
 - Yotam Svoray, University of Utah
+- Miguel Valderrama, Universidad de Valladolid
 - Keiichi Watanabe, Nihon University
