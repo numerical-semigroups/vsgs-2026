@@ -2,6 +2,7 @@
 title: Schedule
 format:
   html:
+    page-layout: full
     code-fold: true
     echo: false
     execute: true
@@ -69,6 +70,13 @@ Talks will be 30 minutes long with a break of 10 minutes for discussion.
 
 12:10 -->
 
+
+The registration will be open on 17 June at 9:00, and at 9:30 we will have the opening of the conference. 
+The room is 124 Anile, located in the Department of Mathematics and Computer Science of the University of Catania.
+
+Blackboard and overhead projector will be available for the talks (but not both simultaneously).
+
+Coffee breaks will be at 11:00 and lunch will be between 13:00 and 15:00.
 
 :::{#talks-list}
 
