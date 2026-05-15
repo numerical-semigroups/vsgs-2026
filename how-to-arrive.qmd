@@ -5,3 +5,26 @@ title: Directions
 The conference will take place at the [Department of Mathematics and Computer Science](https://web.dmi.unict.it/it/content/dipartimento) of the University of Catania, Italy.
 
 <p><iframe frameborder="0" height="300" scrolling="no" src="https://mapsengine.google.com/map/embed?mid=z4aSYWKhfHdw.kfkAWNPzbois" width="100%"></iframe></p>
+
+## From the airport to the hotels
+
+ To go from the airport to the hotel/B&Bs where you will lodge, you can take the Alibus  (for information look https://www.amts.ct.it/alibus; at the url  https://www.amts.ct.it/mappa-delle-linee?percorso=ALIBUS you can find the map and the schedule). The best stop for all the hotel/B&Bs is  no. 21 (no. 20 is almost equivalent). This stop is at 3 minutes walking distance to  Ottomood ala ovest, 12 minutes to Casa Barbero and 15 minutes to Rooms al Centro.
+
+If your luggage is heavy, to go to Casa Barbero and to Rooms al Centro you can take, with the same ticket, any bus on via Etnea going up (on the other side of the road) for two stops. The ticket of the Alibus costs 4 euro and can be bought on the bus.
+
+Otherwise you can find taxi immediately out of the arrivals of the airport
+(please take only official taxis).
+
+## From the hotels to the conference venue
+
+To go from the hotel/B&Bs to the math department, if you do not want to walk (the department is about 20/30 minutes far from the hotels, but it is a climb and in June it could be hot), the best solution is to take the bus BRT1 (https://www.amts.ct.it/mappa-delle-linee?percorso=BRT1) from the stop no. 14 to the stop no. 22.
+
+Information on the tickets can be found at the url https://www.amts.ct.it/.
+
+## Cafeterias
+
+In the campus there are two cafeterias were you can eat the lunch, one in the  CUS (Sport University Centre) and one in the Engineering building, both very close to  Math Department. Otherwise you can walk 15 minutest to Terra² (you can find it on google maps) which has food of very good quality, but is a small place. So if you want to try it, tell to some Italian participant, that can try to call to reserve a table.  
+
+## WI-FI
+
+Eduroam is available in the campus.
