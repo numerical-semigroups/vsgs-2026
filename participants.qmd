@@ -8,12 +8,15 @@ title: "List of participants"
 - Vittoria Bonanzinga, University of Reggio Calabria
 - Alberto Calabri, Università degli Studi di Ferrara
 - Pietro Campochiaro, Jagiellonian University
+- Carmelo Cisto, Università degli Studi di Messina
 - Veronica Crispin Quinonez, Uppsala University
+- Noemi Dongola, Università degli Studi di Messina
 - Marco D'Anna, Università degli Studi di Catania
 - Hailong Dao, University of Kansas
 - Biplab Dawn,	Indian institute of technology Patna
 - Félix Delgado, Universidad de Valladolid
 - Carmelo Antonio Finocchiaro, Università degli Studi di Catania
+- Leonardo Fragapane, Univesità degli Studi di Messina
 - Pedro A. García Sánchez, Universidad de Granada
 - William Giovanni Hernández Yanes, Universidad de La Laguna
 - Lorenzo Guerrieri, Jagiellonian University in Krakow
@@ -22,6 +25,7 @@ title: "List of participants"
 - Vincenzo Micale, Università degli Studi di Catania
 - Alessio Moscariello, University of Graz
 - Julio Moyano, Universitat Jaume I
+- Giorgio Rizzo, Università degli Studi di Messina
 - Francesco Russo, Università degli Studi di Catania
 - Alessio Sammartano, Politecnico di Milano
 - Vincenzo Scarvaglieri, Università degli Studi di Catania
