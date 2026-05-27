@@ -114,6 +114,9 @@ dataf = FileAttachment("talks.tsv").tsv()
 
 data=dataf.sort((a, b) => a.Day.localeCompare(b.Day) || a.Hour.localeCompare(b.Hour))
 
+function isEmptyOrSpaces(str){
+    return str === null || str.match(/^ *$/) !== null;
+}
 
 muestra = function(){
 var code = "<div id='talks'>"
@@ -127,8 +130,21 @@ if (d.Day !== day) {
   year: "numeric"
 }) + "</h3>"
 }
-code = code +"<p> "+ d.Hour+ " <strong>"+ d.Name + "</strong>, " + d.Affiliation + ", <em>" + d.Title + " </em></p>"
-code = code + "<details><summary>Abstract</summary><p>" + d.Abstract + "</p></details>"
+code = code +"<p> "+ d.Hour+ " <strong>"
+if (!isEmptyOrSpaces(d.Name)) {
+  code = code + d.Name
+}
+if (!isEmptyOrSpaces(d.Affiliation)) {
+  code = code + "</strong>, " + d.Affiliation
+}else{
+  console.log("No affiliation for " + d.Name)
+}
+if (!isEmptyOrSpaces(d.Title)) {
+  code = code + ", <em>" + d.Title + " </em></p>"
+}
+if (!isEmptyOrSpaces(d.Abstract)) {
+  code = code + "<details><summary>Abstract</summary><p>" + d.Abstract + "</p></details>"
+}
 code = code + "</div>"
 });
 
