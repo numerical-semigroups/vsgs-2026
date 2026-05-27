@@ -31,4 +31,10 @@ The ideal defined by a numerical semigroup with embedding dimension 4 in the cor
 For a monomial $u_0$ in $n-1$ variables, the Gotzmann threshold $τ_n(u_0)$ is the smallest integer t such that $u_0 x_n^t$ is Gotzmann in $n$ variables. We present a general and efficient procedure to compute $τ_n(u_0)$, based on a combinatorial characterization via maxgen monomials of gaps and cogaps, and on an iterative analysis of upward paths in the lexicographic order. <br> 
 As a key application, we derive the first explicit formula for $τ_5(x_2^d)$, and conjecture that for $n \ge 6$, the threshold $τ_n(x_2^d)$ is a polynomial in d of degree $2^{n-2}$ whose dominant term is an $(n-2)$-iterated binomial coefficient. This conjecture has since been independently confirmed by Chau, and Costantini, Francisco, Mermin, Schweig, pointing to rich new directions in the combinatorics of Hilbert function growth along one-dimensional algebraic structures. <br>
 The content of the talk is a joint work with Shalom Eliahou. "
-19 June 2026	12:10	ps	all participants	all universities	Problem session		Discuss open problems
+19 June 2026	12:10	ps	Problem session	 	 
+17 June 2026	11:00	cf17	Coffee break	 	 	 
+18 June 2026	11:00	cf18	Coffee break	 	 	 
+19 June 2026	11:00	cf19	Coffee break	 	 	 
+17 June 2026	13:00	l17	Lunch break	 	 	 
+18 June 2026	13:00	l18	Lunch break	 	 	 
+19 June 2026	13:00	l19	Lunch break	 	 	 
