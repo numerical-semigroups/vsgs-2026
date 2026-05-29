@@ -132,10 +132,10 @@ if (d.Day !== day) {
 }
 code = code +"<p> "+ d.Hour+ " <strong>"
 if (!isEmptyOrSpaces(d.Name)) {
-  code = code + d.Name
+  code = code + d.Name +"</strong>"
 }
 if (!isEmptyOrSpaces(d.Affiliation)) {
-  code = code + "</strong>, " + d.Affiliation
+  code = code + ", " + d.Affiliation
 }else{
   console.log("No affiliation for " + d.Name)
 }
