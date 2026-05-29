@@ -130,9 +130,9 @@ if (d.Day !== day) {
   year: "numeric"
 }) + "</h3>"
 }
-code = code +"<p> "+ d.Hour+ " <strong>"
+code = code +"<p> "+ d.Hour
 if (!isEmptyOrSpaces(d.Name)) {
-  code = code + d.Name +"</strong>"
+  code = code + " <strong>"+ d.Name +"</strong>"
 }
 if (!isEmptyOrSpaces(d.Affiliation)) {
   code = code + ", " + d.Affiliation
