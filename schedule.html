@@ -280,62 +280,68 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a><span class="co">// ]</span></span>
 <span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>dataf <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"talks.tsv"</span>)<span class="op">.</span><span class="fu">tsv</span>()</span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>chairs <span class="op">=</span> [<span class="st">"Pedro A. García-Sánchez (morning), Francesco Strazzanti (afternoon)"</span><span class="op">,</span> <span class="st">"Julio José Moyano Fernández (morning), Lorenzo Guerrieri (afternoon)"</span><span class="op">,</span> <span class="st">"Hailong Dao (morning)"</span>]<span class="op">;</span></span>
 <span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>data<span class="op">=</span>dataf<span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> a<span class="op">.</span><span class="at">Day</span><span class="op">.</span><span class="fu">localeCompare</span>(b<span class="op">.</span><span class="at">Day</span>) <span class="op">||</span> a<span class="op">.</span><span class="at">Hour</span><span class="op">.</span><span class="fu">localeCompare</span>(b<span class="op">.</span><span class="at">Hour</span>))</span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">isEmptyOrSpaces</span>(str){</span>
-<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> str <span class="op">===</span> <span class="kw">null</span> <span class="op">||</span> str<span class="op">.</span><span class="fu">match</span>(<span class="ss">/</span><span class="sc">^</span><span class="ss"> </span><span class="sc">*$</span><span class="ss">/</span>) <span class="op">!==</span> <span class="kw">null</span><span class="op">;</span></span>
-<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>muestra <span class="op">=</span> <span class="kw">function</span>(){</span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> code <span class="op">=</span> <span class="st">"&lt;div id='talks'&gt;"</span></span>
-<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> day<span class="op">=</span><span class="st">""</span></span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>data<span class="op">.</span><span class="fu">forEach</span>(d <span class="kw">=&gt;</span> {</span>
-<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (d<span class="op">.</span><span class="at">Day</span> <span class="op">!==</span> day) {</span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>  day <span class="op">=</span> d<span class="op">.</span><span class="at">Day</span><span class="op">;</span></span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>  code <span class="op">=</span> code <span class="op">+</span> <span class="st">"&lt;h3&gt;"</span> <span class="op">+</span> day<span class="op">.</span><span class="fu">toLocaleString</span>(<span class="st">"en-UK"</span><span class="op">,</span> {</span>
-<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>  <span class="dt">day</span><span class="op">:</span> <span class="st">"numeric"</span><span class="op">,</span></span>
-<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>  <span class="dt">month</span><span class="op">:</span> <span class="st">"long"</span><span class="op">,</span></span>
-<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>  <span class="dt">year</span><span class="op">:</span> <span class="st">"numeric"</span></span>
-<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>}) <span class="op">+</span> <span class="st">"&lt;/h3&gt;"</span></span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>code <span class="op">=</span> code <span class="op">+</span><span class="st">"&lt;p&gt; "</span><span class="op">+</span> d<span class="op">.</span><span class="at">Hour</span></span>
-<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="op">!</span><span class="fu">isEmptyOrSpaces</span>(d<span class="op">.</span><span class="at">Name</span>)) {</span>
-<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>  code <span class="op">=</span> code <span class="op">+</span> <span class="st">" &lt;strong&gt;"</span><span class="op">+</span> d<span class="op">.</span><span class="at">Name</span> <span class="op">+</span><span class="st">"&lt;/strong&gt;"</span></span>
-<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="op">!</span><span class="fu">isEmptyOrSpaces</span>(d<span class="op">.</span><span class="at">Affiliation</span>)) {</span>
-<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>  code <span class="op">=</span> code <span class="op">+</span> <span class="st">", "</span> <span class="op">+</span> d<span class="op">.</span><span class="at">Affiliation</span></span>
-<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span>{</span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">"No affiliation for "</span> <span class="op">+</span> d<span class="op">.</span><span class="at">Name</span>)</span>
-<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="op">!</span><span class="fu">isEmptyOrSpaces</span>(d<span class="op">.</span><span class="at">Title</span>)) {</span>
-<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>  code <span class="op">=</span> code <span class="op">+</span> <span class="st">", &lt;em&gt;"</span> <span class="op">+</span> d<span class="op">.</span><span class="at">Title</span> <span class="op">+</span> <span class="st">" &lt;/em&gt;&lt;/p&gt;"</span></span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="op">!</span><span class="fu">isEmptyOrSpaces</span>(d<span class="op">.</span><span class="at">Abstract</span>)) {</span>
-<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>  code <span class="op">=</span> code <span class="op">+</span> <span class="st">"&lt;details&gt;&lt;summary&gt;Abstract&lt;/summary&gt;&lt;p&gt;"</span> <span class="op">+</span> d<span class="op">.</span><span class="at">Abstract</span> <span class="op">+</span> <span class="st">"&lt;/p&gt;&lt;/details&gt;"</span></span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>dataf <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"talks.tsv"</span>)<span class="op">.</span><span class="fu">tsv</span>()</span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>data<span class="op">=</span>dataf<span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> a<span class="op">.</span><span class="at">Day</span><span class="op">.</span><span class="fu">localeCompare</span>(b<span class="op">.</span><span class="at">Day</span>) <span class="op">||</span> a<span class="op">.</span><span class="at">Hour</span><span class="op">.</span><span class="fu">localeCompare</span>(b<span class="op">.</span><span class="at">Hour</span>))</span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">isEmptyOrSpaces</span>(str){</span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> str <span class="op">===</span> <span class="kw">null</span> <span class="op">||</span> str<span class="op">.</span><span class="fu">match</span>(<span class="ss">/</span><span class="sc">^</span><span class="ss"> </span><span class="sc">*$</span><span class="ss">/</span>) <span class="op">!==</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>muestra <span class="op">=</span> <span class="kw">function</span>(){</span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> code <span class="op">=</span> <span class="st">"&lt;div id='talks'&gt;"</span></span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> day<span class="op">=</span><span class="st">""</span></span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> i<span class="op">=</span><span class="dv">0</span></span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>data<span class="op">.</span><span class="fu">forEach</span>(d <span class="kw">=&gt;</span> {</span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (d<span class="op">.</span><span class="at">Day</span> <span class="op">!==</span> day) {</span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>  day <span class="op">=</span> d<span class="op">.</span><span class="at">Day</span><span class="op">;</span></span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>  code <span class="op">=</span> code <span class="op">+</span> <span class="st">"&lt;h3&gt;"</span> <span class="op">+</span> day<span class="op">.</span><span class="fu">toLocaleString</span>(<span class="st">"en-UK"</span><span class="op">,</span> {</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>  <span class="dt">day</span><span class="op">:</span> <span class="st">"numeric"</span><span class="op">,</span></span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>  <span class="dt">month</span><span class="op">:</span> <span class="st">"long"</span><span class="op">,</span></span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>  <span class="dt">year</span><span class="op">:</span> <span class="st">"numeric"</span></span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>}) <span class="op">+</span> <span class="st">"&lt;/h3&gt;"</span></span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>code <span class="op">=</span> code <span class="op">+</span> <span class="st">"&lt;p&gt;&lt;strong&gt;Chairs:&lt;/strong&gt; "</span> <span class="op">+</span> chairs[i] <span class="op">+</span> <span class="st">"&lt;/p&gt;"</span></span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>i<span class="op">++</span></span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>code <span class="op">=</span> code <span class="op">+</span><span class="st">"&lt;p&gt; "</span><span class="op">+</span> d<span class="op">.</span><span class="at">Hour</span></span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="op">!</span><span class="fu">isEmptyOrSpaces</span>(d<span class="op">.</span><span class="at">Name</span>)) {</span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>  code <span class="op">=</span> code <span class="op">+</span> <span class="st">" &lt;strong&gt;"</span><span class="op">+</span> d<span class="op">.</span><span class="at">Name</span> <span class="op">+</span><span class="st">"&lt;/strong&gt;"</span></span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="op">!</span><span class="fu">isEmptyOrSpaces</span>(d<span class="op">.</span><span class="at">Affiliation</span>)) {</span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>  code <span class="op">=</span> code <span class="op">+</span> <span class="st">", "</span> <span class="op">+</span> d<span class="op">.</span><span class="at">Affiliation</span></span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span>{</span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">"No affiliation for "</span> <span class="op">+</span> d<span class="op">.</span><span class="at">Name</span>)</span>
 <span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>code <span class="op">=</span> code <span class="op">+</span> <span class="st">"&lt;/div&gt;"</span></span>
-<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
-<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> code</span>
-<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a><span class="co">//html`${data.map(d =&gt; html`&lt;p&gt;${d.Name} ${d.Affiliation} ${d.Title}&lt;/p&gt;`)}`</span></span>
-<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="co">//html`&lt;p&gt;${data[0].Title.val}&lt;/p&gt;`</span></span>
-<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a><span class="co">// blah ="$x^2$"</span></span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="op">!</span><span class="fu">isEmptyOrSpaces</span>(d<span class="op">.</span><span class="at">Title</span>)) {</span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>  code <span class="op">=</span> code <span class="op">+</span> <span class="st">", &lt;em&gt;"</span> <span class="op">+</span> d<span class="op">.</span><span class="at">Title</span> <span class="op">+</span> <span class="st">" &lt;/em&gt;&lt;/p&gt;"</span></span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="op">!</span><span class="fu">isEmptyOrSpaces</span>(d<span class="op">.</span><span class="at">Abstract</span>)) {</span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>  code <span class="op">=</span> code <span class="op">+</span> <span class="st">"&lt;details&gt;&lt;summary&gt;Abstract&lt;/summary&gt;&lt;p&gt;"</span> <span class="op">+</span> d<span class="op">.</span><span class="at">Abstract</span> <span class="op">+</span> <span class="st">"&lt;/p&gt;&lt;/details&gt;"</span></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>code <span class="op">=</span> code <span class="op">+</span> <span class="st">"&lt;/div&gt;"</span></span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> code</span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="co">// ble = data[0].Title</span></span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="co">//html`${data.map(d =&gt; html`&lt;p&gt;${d.Name} ${d.Affiliation} ${d.Title}&lt;/p&gt;`)}`</span></span>
 <span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="co">// blu = ble + " $x^2$"</span></span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="co">//html`&lt;p&gt;${data[0].Title.val}&lt;/p&gt;`</span></span>
 <span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a><span class="co">// example = html`${blah}`</span></span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a><span class="co">// blah ="$x^2$"</span></span>
 <span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a><span class="co">// ex = html`${blu}`</span></span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a><span class="co">// ble = data[0].Title</span></span>
 <span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`</span><span class="sc">${</span><span class="fu">muestra</span>()<span class="sc">}</span><span class="vs">`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a><span class="co">// blu = ble + " $x^2$"</span></span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a><span class="co">// example = html`${blah}`</span></span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a><span class="co">// ex = html`${blu}`</span></span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`</span><span class="sc">${</span><span class="fu">muestra</span>()<span class="sc">}</span><span class="vs">`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
@@ -381,7 +387,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="cell-output cell-output-display">
 <div>
-<div id="ojs-cell-1-7" data-nodetype="expression">
+<div id="ojs-cell-1-7" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-8" data-nodetype="expression">
 
 </div>
 </div>
@@ -402,7 +415,7 @@ MathJax.typesetPromise(["talks-list"])
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Ik1hdGhKYXggPSB7XG4gIGNvbnN0IE1hdGhKYXggPSBhd2FpdCByZXF1aXJlKCdodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvbnBtL21hdGhqYXhANC90ZXgtc3ZnLmpzJylcbiAgICAuY2F0Y2goKCkgPT4gd2luZG93Lk1hdGhKYXgpXG4gIHJldHVybiBNYXRoSmF4XG59XG5cblxud209IHdpbmRvd1snTWF0aEpheCddID0ge1xuICB0ZXg6IHtcbiAgICBpbmxpbmVNYXRoOiB7J1srXSc6IFtbJyQnLCAnJCddLCBbJ1xcXFwoJywgJ1xcXFwpJ11dfVxuICB9LFxuICBvdXRwdXQ6IHtcbiAgICAgICAgZm9udDogJ21hdGhqYXgtZmlyYScsXG4gICAgICAgIGRpc3BsYXlPdmVyZmxvdzogJ3Njcm9sbCdcbiAgfVxufTtcblxuXG5cbi8vZmlsZSA9IEZpbGVBdHRhY2htZW50KFwidGFsa3MueGxzeFwiKS54bHN4KCkgXG4vL2RhdGEgPSBmaWxlLnNoZWV0KFwidGFsa3NcIiwge3JhbmdlOlwiQTE6RzIxXCIsaGVhZGVyczogdHJ1ZX0pXG5cbi8vIGRhdGEgPSBbXG4vLyAgIHtOYW1lOiBcIkFsaWNlXCIsIEFmZmlsaWF0aW9uOiBcIlVuaXZlcnNpdHkgQVwiLCBUaXRsZTogXCJUYWxrIG9uICR4XjIkXCJ9LFxuLy8gICB7TmFtZTogXCJCb2JcIiwgQWZmaWxpYXRpb246IFwiVW5pdmVyc2l0eSBCXCIsIFRpdGxlOiBcIlRhbGsgb24gJHleMiRcIn1cbi8vIF1cblxuXG5kYXRhZiA9IEZpbGVBdHRhY2htZW50KFwidGFsa3MudHN2XCIpLnRzdigpXG5cbmRhdGE9ZGF0YWYuc29ydCgoYSwgYikgPT4gYS5EYXkubG9jYWxlQ29tcGFyZShiLkRheSkgfHwgYS5Ib3VyLmxvY2FsZUNvbXBhcmUoYi5Ib3VyKSlcblxuZnVuY3Rpb24gaXNFbXB0eU9yU3BhY2VzKHN0cil7XG4gICAgcmV0dXJuIHN0ciA9PT0gbnVsbCB8fCBzdHIubWF0Y2goL14gKiQvKSAhPT0gbnVsbDtcbn1cblxubXVlc3RyYSA9IGZ1bmN0aW9uKCl7XG52YXIgY29kZSA9IFwiPGRpdiBpZD0ndGFsa3MnPlwiXG52YXIgZGF5PVwiXCJcbmRhdGEuZm9yRWFjaChkID0+IHtcbmlmIChkLkRheSAhPT0gZGF5KSB7XG4gIGRheSA9IGQuRGF5O1xuICBjb2RlID0gY29kZSArIFwiPGgzPlwiICsgZGF5LnRvTG9jYWxlU3RyaW5nKFwiZW4tVUtcIiwge1xuICBkYXk6IFwibnVtZXJpY1wiLFxuICBtb250aDogXCJsb25nXCIsXG4gIHllYXI6IFwibnVtZXJpY1wiXG59KSArIFwiPC9oMz5cIlxufVxuY29kZSA9IGNvZGUgK1wiPHA+IFwiKyBkLkhvdXJcbmlmICghaXNFbXB0eU9yU3BhY2VzKGQuTmFtZSkpIHtcbiAgY29kZSA9IGNvZGUgKyBcIiA8c3Ryb25nPlwiKyBkLk5hbWUgK1wiPC9zdHJvbmc+XCJcbn1cbmlmICghaXNFbXB0eU9yU3BhY2VzKGQuQWZmaWxpYXRpb24pKSB7XG4gIGNvZGUgPSBjb2RlICsgXCIsIFwiICsgZC5BZmZpbGlhdGlvblxufWVsc2V7XG4gIGNvbnNvbGUubG9nKFwiTm8gYWZmaWxpYXRpb24gZm9yIFwiICsgZC5OYW1lKVxufVxuaWYgKCFpc0VtcHR5T3JTcGFjZXMoZC5UaXRsZSkpIHtcbiAgY29kZSA9IGNvZGUgKyBcIiwgPGVtPlwiICsgZC5UaXRsZSArIFwiIDwvZW0+PC9wPlwiXG59XG5pZiAoIWlzRW1wdHlPclNwYWNlcyhkLkFic3RyYWN0KSkge1xuICBjb2RlID0gY29kZSArIFwiPGRldGFpbHM+PHN1bW1hcnk+QWJzdHJhY3Q8L3N1bW1hcnk+PHA+XCIgKyBkLkFic3RyYWN0ICsgXCI8L3A+PC9kZXRhaWxzPlwiXG59XG5jb2RlID0gY29kZSArIFwiPC9kaXY+XCJcbn0pO1xuXG5yZXR1cm4gY29kZVxufVxuXG4vL2h0bWxgJHtkYXRhLm1hcChkID0+IGh0bWxgPHA+JHtkLk5hbWV9ICR7ZC5BZmZpbGlhdGlvbn0gJHtkLlRpdGxlfTwvcD5gKX1gXG5cbi8vaHRtbGA8cD4ke2RhdGFbMF0uVGl0bGUudmFsfTwvcD5gXG5cbi8vIGJsYWggPVwiJHheMiRcIlxuXG4vLyBibGUgPSBkYXRhWzBdLlRpdGxlXG5cbi8vIGJsdSA9IGJsZSArIFwiICR4XjIkXCJcblxuLy8gZXhhbXBsZSA9IGh0bWxgJHtibGFofWBcblxuLy8gZXggPSBodG1sYCR7Ymx1fWBcblxuaHRtbGAke211ZXN0cmEoKX1gXG5cbiJ9XX0=
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Ik1hdGhKYXggPSB7XG4gIGNvbnN0IE1hdGhKYXggPSBhd2FpdCByZXF1aXJlKCdodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvbnBtL21hdGhqYXhANC90ZXgtc3ZnLmpzJylcbiAgICAuY2F0Y2goKCkgPT4gd2luZG93Lk1hdGhKYXgpXG4gIHJldHVybiBNYXRoSmF4XG59XG5cblxud209IHdpbmRvd1snTWF0aEpheCddID0ge1xuICB0ZXg6IHtcbiAgICBpbmxpbmVNYXRoOiB7J1srXSc6IFtbJyQnLCAnJCddLCBbJ1xcXFwoJywgJ1xcXFwpJ11dfVxuICB9LFxuICBvdXRwdXQ6IHtcbiAgICAgICAgZm9udDogJ21hdGhqYXgtZmlyYScsXG4gICAgICAgIGRpc3BsYXlPdmVyZmxvdzogJ3Njcm9sbCdcbiAgfVxufTtcblxuXG5cbi8vZmlsZSA9IEZpbGVBdHRhY2htZW50KFwidGFsa3MueGxzeFwiKS54bHN4KCkgXG4vL2RhdGEgPSBmaWxlLnNoZWV0KFwidGFsa3NcIiwge3JhbmdlOlwiQTE6RzIxXCIsaGVhZGVyczogdHJ1ZX0pXG5cbi8vIGRhdGEgPSBbXG4vLyAgIHtOYW1lOiBcIkFsaWNlXCIsIEFmZmlsaWF0aW9uOiBcIlVuaXZlcnNpdHkgQVwiLCBUaXRsZTogXCJUYWxrIG9uICR4XjIkXCJ9LFxuLy8gICB7TmFtZTogXCJCb2JcIiwgQWZmaWxpYXRpb246IFwiVW5pdmVyc2l0eSBCXCIsIFRpdGxlOiBcIlRhbGsgb24gJHleMiRcIn1cbi8vIF1cblxuXG5jaGFpcnMgPSBbXCJQZWRybyBBLiBHYXJjw61hLVPDoW5jaGV6IChtb3JuaW5nKSwgRnJhbmNlc2NvIFN0cmF6emFudGkgKGFmdGVybm9vbilcIiwgXCJKdWxpbyBKb3PDqSBNb3lhbm8gRmVybsOhbmRleiAobW9ybmluZyksIExvcmVuem8gR3VlcnJpZXJpIChhZnRlcm5vb24pXCIsIFwiSGFpbG9uZyBEYW8gKG1vcm5pbmcpXCJdO1xuXG5cbmRhdGFmID0gRmlsZUF0dGFjaG1lbnQoXCJ0YWxrcy50c3ZcIikudHN2KClcblxuZGF0YT1kYXRhZi5zb3J0KChhLCBiKSA9PiBhLkRheS5sb2NhbGVDb21wYXJlKGIuRGF5KSB8fCBhLkhvdXIubG9jYWxlQ29tcGFyZShiLkhvdXIpKVxuXG5mdW5jdGlvbiBpc0VtcHR5T3JTcGFjZXMoc3RyKXtcbiAgICByZXR1cm4gc3RyID09PSBudWxsIHx8IHN0ci5tYXRjaCgvXiAqJC8pICE9PSBudWxsO1xufVxuXG5tdWVzdHJhID0gZnVuY3Rpb24oKXtcbnZhciBjb2RlID0gXCI8ZGl2IGlkPSd0YWxrcyc+XCJcbnZhciBkYXk9XCJcIlxudmFyIGk9MFxuZGF0YS5mb3JFYWNoKGQgPT4ge1xuaWYgKGQuRGF5ICE9PSBkYXkpIHtcbiAgZGF5ID0gZC5EYXk7XG4gIGNvZGUgPSBjb2RlICsgXCI8aDM+XCIgKyBkYXkudG9Mb2NhbGVTdHJpbmcoXCJlbi1VS1wiLCB7XG4gIGRheTogXCJudW1lcmljXCIsXG4gIG1vbnRoOiBcImxvbmdcIixcbiAgeWVhcjogXCJudW1lcmljXCJcbn0pICsgXCI8L2gzPlwiXG5jb2RlID0gY29kZSArIFwiPHA+PHN0cm9uZz5DaGFpcnM6PC9zdHJvbmc+IFwiICsgY2hhaXJzW2ldICsgXCI8L3A+XCJcbmkrK1xufVxuY29kZSA9IGNvZGUgK1wiPHA+IFwiKyBkLkhvdXJcbmlmICghaXNFbXB0eU9yU3BhY2VzKGQuTmFtZSkpIHtcbiAgY29kZSA9IGNvZGUgKyBcIiA8c3Ryb25nPlwiKyBkLk5hbWUgK1wiPC9zdHJvbmc+XCJcbn1cbmlmICghaXNFbXB0eU9yU3BhY2VzKGQuQWZmaWxpYXRpb24pKSB7XG4gIGNvZGUgPSBjb2RlICsgXCIsIFwiICsgZC5BZmZpbGlhdGlvblxufWVsc2V7XG4gIGNvbnNvbGUubG9nKFwiTm8gYWZmaWxpYXRpb24gZm9yIFwiICsgZC5OYW1lKVxufVxuaWYgKCFpc0VtcHR5T3JTcGFjZXMoZC5UaXRsZSkpIHtcbiAgY29kZSA9IGNvZGUgKyBcIiwgPGVtPlwiICsgZC5UaXRsZSArIFwiIDwvZW0+PC9wPlwiXG59XG5pZiAoIWlzRW1wdHlPclNwYWNlcyhkLkFic3RyYWN0KSkge1xuICBjb2RlID0gY29kZSArIFwiPGRldGFpbHM+PHN1bW1hcnk+QWJzdHJhY3Q8L3N1bW1hcnk+PHA+XCIgKyBkLkFic3RyYWN0ICsgXCI8L3A+PC9kZXRhaWxzPlwiXG59XG5jb2RlID0gY29kZSArIFwiPC9kaXY+XCJcbn0pO1xuXG5yZXR1cm4gY29kZVxufVxuXG4vL2h0bWxgJHtkYXRhLm1hcChkID0+IGh0bWxgPHA+JHtkLk5hbWV9ICR7ZC5BZmZpbGlhdGlvbn0gJHtkLlRpdGxlfTwvcD5gKX1gXG5cbi8vaHRtbGA8cD4ke2RhdGFbMF0uVGl0bGUudmFsfTwvcD5gXG5cbi8vIGJsYWggPVwiJHheMiRcIlxuXG4vLyBibGUgPSBkYXRhWzBdLlRpdGxlXG5cbi8vIGJsdSA9IGJsZSArIFwiICR4XjIkXCJcblxuLy8gZXhhbXBsZSA9IGh0bWxgJHtibGFofWBcblxuLy8gZXggPSBodG1sYCR7Ymx1fWBcblxuaHRtbGAke211ZXN0cmEoKX1gXG5cbiJ9XX0=
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
