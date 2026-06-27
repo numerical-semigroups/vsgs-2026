@@ -148,6 +148,9 @@ if (!isEmptyOrSpaces(d.Affiliation)) {
 if (!isEmptyOrSpaces(d.Title)) {
   code = code + ", <em>" + d.Title + " </em></p>"
 }
+if (!isEmptyOrSpaces(d.Slides)) {
+  code = code + "<p><a href='slides/" + d.Slides + ".pdf' target='_blank'>Slides</a></p>"
+}
 if (!isEmptyOrSpaces(d.Abstract)) {
   code = code + "<details><summary>Abstract</summary><p>" + d.Abstract + "</p></details>"
 }
